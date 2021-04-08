@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'lzb\'s blog',
-    description: '我的个人网站',
+    title: '刘圳槟的个人博客',
+    description: '刘圳槟的个人博客',
     head: [ // 注入到当前页面的 HTML <head> 中的标签
         ['link', { rel: 'icon', href: '/logo.jpg' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
@@ -10,11 +10,19 @@ module.exports = {
     },
     themeConfig: {
         nav: [ // 导航栏配置
-            { text: '前端基础', link: '/accumulate/' },
-            { text: '算法题库', link: '/algorithm/' },
-            { text: '微博', link: 'https://baidu.com' }
+            { text: '前端知识体系', link: '/knowledge/css' },
         ],
-        sidebar: 'auto', // 侧边栏配置
+        sidebar: {
+            '/knowledge': [{
+                title: '前端知识体系',
+                collapsable: false,
+                children: [
+                    { title: 'JavaScript', path: '/knowledge/javascript' },
+                    { title: 'HTML和CSS', path: '/knowledge/css' },
+                    { title: '计算机基础', path: '/knowledge/computer' },
+                ]
+            }]
+        },
         sidebarDepth: 2, // 侧边栏显示2级
     }
 };
