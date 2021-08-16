@@ -20,6 +20,7 @@ module.exports = {
                     { title: 'JavaScript', path: '/knowledge/javascript' },
                     { title: 'HTML和CSS', path: '/knowledge/css' },
                     { title: '计算机基础', path: '/knowledge/computer' },
+                    { title: '算法', path: '/knowledge/algorithms' },
                 ]
             }]
         },
